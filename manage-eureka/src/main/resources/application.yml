@@ -1,0 +1,17 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: Manage-Eureka
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false ##单节点注册中心
+    fetch-registry: false
+    instance-info-replication-interval-seconds: 30
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+

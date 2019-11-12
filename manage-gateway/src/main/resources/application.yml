@@ -1,0 +1,38 @@
+server:
+  port: 8301
+spring:
+  application:
+    name: Manage-Gateway
+  #使用谓词工厂进行请求转发
+    cloud:
+      gateway:
+        routes:
+          - id: Manage-Service
+            uri: http://localhost:8201/insertUser
+            predicates:
+              - Path=/service/**
+#            filters:
+#                        - name: Hystrix
+#                          args:
+#                            name: servicefallback
+#                            fallbackUri: forward:/fallback/Manage-Service
+        default-filters:
+          - StripPrefix=1   #请求转发前，将Path的内容截去前面一位
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 20
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    instance-info-replication-interval-seconds: 30
+    registry-fetch-interval-seconds: 3
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000

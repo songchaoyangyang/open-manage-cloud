@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/manage-cloud/manage-cloud.iml" filepath="$PROJECT_DIR$/manage-cloud/manage-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manage-eureka/manage-eureka.iml" filepath="$PROJECT_DIR$/manage-eureka/manage-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manage-gateway/manage-gateway.iml" filepath="$PROJECT_DIR$/manage-gateway/manage-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/manage-service/manage-service.iml" filepath="$PROJECT_DIR$/manage-service/manage-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mange-auth/mange-auth.iml" filepath="$PROJECT_DIR$/mange-auth/mange-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/open-cloud-manage.iml" filepath="$PROJECT_DIR$/.idea/open-cloud-manage.iml" />
+    </modules>
+  </component>
+</project>

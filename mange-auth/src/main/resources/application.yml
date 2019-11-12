@@ -1,0 +1,26 @@
+server:
+  port: 8101
+
+spring:
+  application:
+    name: Manage-Auth
+  redis:
+      database: 0
+      host: 127.0.0.1
+      port: 6379
+      jedis:
+        pool:
+          min-idle: 8
+          max-idle: 500
+          max-active: 2000
+          max-wait: 10000
+      timeout: 5000
+
+eureka:
+  client:
+    register-with-eureka: true #向eureka注册服务
+    fetch-registry: true #获取注册服务信息
+    instance-info-replication-interval-seconds: 30  #新实例信息变化到服务端时间（秒）
+    registry-fetch-interval-seconds: 3 #每3秒获取服务信息并缓存，默认30秒
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
